@@ -67,10 +67,11 @@ Puis dans dans la balise `body` nous allons ajouter:
     <!--La Navbar-->
     <nav>
       <i id="menu-button" class="bi bi-list"></i>
-      <ul id="menu-closed">
-        <a href="index.html">Acceuil</a>
-        <a href="index.html">Contact</a>
-        <a href="index.html">A propos</a>
+      <span class="brand">BRAND</span>
+      <ul id="menu-closed" class="menu">
+        <a class="link" href="index.html">Acceuil</a>
+        <a class="link" href="index.html">Contact</a>
+        <a class="link" href="index.html">A propos</a>
       </ul>
     </nav>
 
