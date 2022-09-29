@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!--CDN Bootstrap pour l'icone du Menu-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!--Notre style-->
+    <link rel="stylesheet" href="index.css" />
+
+    <meta charset="UTF-8" />
+
+    <title>Javascript Navbar Responsive Tuto</title>
+  </head>
+  <body>
+    <!--La Navbar-->
+    <nav>
+      <i id="menu-button" class="bi bi-list"></i>
+      <ul id="menu-closed">
+        <a href="index.html">Acceuil</a>
+        <a href="index.html">Contact</a>
+        <a href="index.html">A propos</a>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Tutoriel: Créer une Navbar Responsive en Javascript</h1>
+      <p>Tutoriel pour créer un Navbar responsive avec HTML, CSS et Javascript.</p>
+      <p>
+        La Navbar s'adapte à la taille de l'écran, et affiche un bouton pour dérouler
+        le menu pour petit écran.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Structure du projet:</h2>
+        <p>
+          Dans cet l'exemple , il y'a 3 fichiers:
+        </p>
+        <pre>
+          📦Javascript-Navbar-Responsive-Tuto 
+           ┣ 📜index.css 
+           ┣ 📜index.html 
+           ┗ 📜index.js
+        </pre>
+      </section>
+
+      <section>
+        <h2>Le HTML:</h2>
+        <p>
+          Dans la page html <code>index.html</code>, vous trouverez dans la balise
+          <code>head</code>:
+        </p>
+        <ul>
+          <li>
+            <a href="https://icons.getbootstrap.com/#install" target="blank"
+              >Le lien du CDN des icones de Bootstrap</a
+            >
+          </li>
+          <li>
+            Le liens vers le fichier css <code>index.css</code>:
+          </li>
+        </ul>
+
+        <p>
+            Et dans dans la balise <code>body</code>, vous trouverez:
+          </p>
+          <ul>
+            <li>
+                La balise <code>nav</code> contenant une icone et une liste de liens.
+            </li>
+            <li>
+                Le lien vers le fichier script <code>index.js</code>
+            </li>
+          </ul>
+      </section>
+
+      <!--Notre script pour l'interaction avec le bouton du menu-->
+      <script src="index.js"></script>
+    </main>
+
+    <footer>
+      <a href="https://djemai-samy.com/posts/javascript-menu-slide.article"
+        >Tutoriel complet sur mon dite -></a
+      >
+    </footer>
+  </body>
+</html>
