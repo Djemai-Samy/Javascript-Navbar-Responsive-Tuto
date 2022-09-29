@@ -66,14 +66,20 @@ Puis dans dans la balise `body` nous allons ajouter:
   <body>
     <!--La Navbar-->
     <nav>
-      <i id="menu-button" class="bi bi-list"></i>
-      <span class="brand">BRAND</span>
-      <ul id="menu-closed" class="menu">
-        <a class="link" href="index.html">Acceuil</a>
-        <a class="link" href="index.html">Contact</a>
-        <a class="link" href="index.html">A propos</a>
-      </ul>
-    </nav>
+        <i id="menu-button" class="bi bi-list"></i>
+        <span class="brand">BRAND</span>
+        <ul id="menu-closed" class="menu">
+            <li>
+                <a class="link" href="index.html">Acceuil</a>
+            </li>
+            <li>
+                <a class="link" href="index.html">Contact</a>
+            </li>
+            <li>
+                <a class="link" href="index.html">A propos</a>
+            </li>
+        </ul>
+      </nav>
 
     <!--Script pour l'interaction avec le bouton-->
     <script src="index.js"></script>
