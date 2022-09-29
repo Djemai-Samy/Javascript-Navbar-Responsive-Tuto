@@ -58,7 +58,7 @@ Puis dans dans la balise `body` nous allons ajouter:
 - `Ligne 18`: Le lien vers
   notre fichier script `index.js`.
 
-````html
+```html
 <!DOCTYPE html>
 <html lang="fr">
   <!--... La balise head ...-->
@@ -79,4 +79,3 @@ Puis dans dans la balise `body` nous allons ajouter:
   </body>
 </html>
 ```
-````
