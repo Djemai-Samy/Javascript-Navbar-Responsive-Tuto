@@ -139,7 +139,7 @@ nav {
 }
 ```
 
-- Le bouton du menu ```#menu-button``` est caché pour grands écrans. Dans l'étape suivante, nous allon changer son style et l'afficher pour les écrans inférieurs à 600px.
+- Le bouton du menu ```#menu-button``` est caché pour grands écrans. Dans l'étape suivante, nous allons changer son style et l'afficher pour les écrans inférieurs à 600px.
 
 ---
 
