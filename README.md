@@ -1,6 +1,6 @@
 # Javascript-Navbar-Responsive-Tuto
 
-Tutoriel pour créer un Navbar responsive avec HTML, CSS et Javascript.
+Tutoriel pour créer une Navbar responsive avec HTML, CSS et Javascript.
 
 La Navbar s'adaptera à la taille de l'écran, et affichera un bouton pour dérouler le menu pour petit écran.
 
@@ -54,7 +54,7 @@ Dans notre page html `index.html`, nous allons mettre dans la balise `head`:
 
 ---
 
-Puis dans dans la balise `body` nous allons ajouter:
+Puis dans la balise `body` nous allons ajouter:
 
 - La balise `nav` contenant une icône et une liste de liens.
 - Le lien vers notre fichier script `index.js`.
@@ -109,6 +109,8 @@ main {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   height: 3.5em;
   display: flex;
   align-items: center;
@@ -126,6 +128,7 @@ nav {
   padding: 0 0.5em;
 }
 
+/*Cacher le bouton */
 #menu-button {
   display: none;
 }
@@ -136,20 +139,21 @@ nav {
 }
 ```
 
-- Le bouton du menu `#menu-button` est caché pour grands écrans. Dans l'étape suivante, nous allons changer son style et l'afficher pour les écrans inférieurs à 600px.
+- Le bouton du menu ```#menu-button``` est caché pour grands écrans. Dans l'étape suivante, nous allon changer son style et l'afficher pour les écrans inférieurs à 600px.
 
 ---
 
 Pour pouvoir modifier le style des éléments suivant la taille de l'écran, nous allons utiliser le query `@media`:
 
-- Afficher le bouton `#menu-button`.
-- Mettre le menu en position absolue, pour pouvoir changer sa position.
-- Ajouter une transition quand l'une des propriétés est modifiée.
-- Les selecteurs `#menu-closed` et `#menu-opened` sont responsables de la position du menu (ouvert ou fermé)
+- 1: Afficher le bouton `#menu-button`.
+- 2: Mettre le menu en position absolue, pour pouvoir changer sa position.
+- 3: Ajouter une transition quand l'une des propriétés est modifiée.
+- 4: Les selecteurs `#menu-closed` et `#menu-opened` sont responsables de la position du menu (ouvert ou fermé)
 
 ```css
 @media screen and (max-width: 600px) {
   #menu-button {
+    /*1: Afficher le bouton*/
     display: inline;
     color: whitesmoke;
     font-size: 2em;
@@ -157,14 +161,17 @@ Pour pouvoir modifier le style des éléments suivant la taille de l'écran, nou
     cursor: pointer;
   }
   .menu {
+    /*2: Mettre le menu en position absolue */
     position: absolute;
     top: 3.6em;
     background-color: rgba(4, 36, 84, 0.952);
     flex-direction: column;
     padding: 2em;
     min-width: 50%;
+    /*3: Ajouter une transition*/
     transition: all 0.5s ease-in-out;
   }
+  /*4: Selecteurs pour changer la position*/
   #menu-closed {
     left: -100%;
   }
@@ -174,7 +181,52 @@ Pour pouvoir modifier le style des éléments suivant la taille de l'écran, nou
 }
 ```
 
-  <img
+<img
     style="width: 100%; maxHeight: 60vh; objectFit: contain;"
     src="https://djemai-samy.com/blog/2.programmation/1.web/3.javascript/1.javascript-menu-slide/JS-MenuSlide-3.gif"
   />
+
+## 4/ Le Javascript
+
+Nous allons utiliser le Javascript dans le fichier `index.js`, pour ajouter de l'interaction avec notre page, et afficher ou cacher le menu:
+
+- `1`: Sélectionner l'élément HTML représentant le bouton du menu avec son id `menu-button`.
+- `2`: Ajouter un observateur d'événements clique, qui exécute une fonction.
+
+Dans la fonction qui s'éxecute lors du clique, nous allons:
+
+- `3`: Sélectionner l'élément HTML représentant notre menu avec sa classe `.menu`.
+- `4`: Tester si son id est égal à `menu-closed`:
+  - `5`: Nous lui affectons la valeur `menu-opened`
+  - `6`: Sinon nous lui affectons la valeur `menu-closed`
+
+```js
+//1: Sélectionner l'élément HTML représentant le bouton du menu.
+const menuButtonElement = document.getElementById("menu-button");
+
+//2: Ajouter un observateur d'événements sur le bouton
+menuButtonElement.addEventListener("click", () => {
+  //3: Sélectionner l'élément HTML ul représentant not menu
+  const menuElement = document.querySelector(".menu");
+
+  //4: Tester si le menu est fermé
+  if (menuElement.id == "menu-closed") {
+    //5: Changer l'id de l'élément pour l'afficher
+    menuElement.id = "menu-opened";
+  } else {
+    //6: Sinon changer l'id de l'élément pour le cacher
+    menuElement.id = "menu-closed";
+  }
+});
+```
+
+<img
+    style="width: 100%; maxHeight: 60vh; objectFit: contain;"
+    src="https://djemai-samy.com/blog/2.programmation/1.web/3.javascript/1.javascript-menu-slide/4_MenuSlideJS.gif"
+  />
+
+---
+
+## FIN
+
+---

@@ -1,5 +1,4 @@
-/* STYLE GRAND ECRAN POUR TUTO */
-
+/* STYLE POUR TUTO */
 :root {
   --main-color: rgb(4, 36, 84);
 }
@@ -19,7 +18,8 @@ main {
 }
 
 nav {
-  list-style: none;
+  position: sticky;
+  top: 0;
   height: 3.5em;
   display: flex;
   align-items: center;
@@ -30,6 +30,7 @@ nav {
 .menu {
   position: relative;
   display: flex;
+  list-style: none;
 }
 
 .link {
@@ -44,6 +45,31 @@ nav {
 .brand {
   color: whitesmoke;
   padding: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  #menu-button {
+    display: inline;
+    color: whitesmoke;
+    font-size: 2em;
+    padding: 0 0.5em;
+    cursor: pointer;
+  }
+  .menu {
+    position: absolute;
+    top: 3.6em;
+    background-color: rgba(4, 36, 84, 0.952);
+    flex-direction: column;
+    padding: 2em;
+    min-width: 50%;
+    transition: all 0.5s ease-in-out;
+  }
+  #menu-closed{
+    left: -100%;
+  }
+  #menu-opened{
+    left: 0;
+  }
 }
 
 /* STYLE HORS TUTO */
@@ -72,30 +98,4 @@ footer{
 
 footer > a{
   color:whitesmoke;
-}
-
-/* STYLE PETIT ECRAN POUR TUTO */
-@media screen and (max-width: 600px) {
-  #menu-button {
-    display: inline;
-    color: whitesmoke;
-    font-size: 2em;
-    padding: 0 0.5em;
-    cursor: pointer;
-  }
-  .menu {
-    position: absolute;
-    top: 3.6em;
-    background-color: rgba(4, 36, 84, 0.952);
-    flex-direction: column;
-    padding: 2em;
-    min-width: 50%;
-    transition: all 0.5s ease-in-out;
-  }
-  #menu-closed{
-    left: -100%;
-  }
-  #menu-opened{
-    left: 0;
-  }
 }

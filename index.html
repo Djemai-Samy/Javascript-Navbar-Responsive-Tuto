@@ -34,7 +34,7 @@
 
     <header>
       <h1>Tutoriel: Créer une Navbar Responsive en Javascript</h1>
-      <p>Tutoriel pour créer un Navbar responsive avec HTML, CSS et Javascript.</p>
+      <p>Tutoriel pour créer une Navbar responsive avec HTML, CSS et Javascript.</p>
       <p>
         La Navbar s'adapte à la taille de l'écran, et affiche un bouton pour dérouler le
         menu pour petit écran.
@@ -68,7 +68,7 @@
           <li>Le liens vers le fichier css <code>index.css</code>:</li>
         </ul>
 
-        <br>
+        <br />
 
         <p>Et dans la balise <code>body</code>, vous trouverez:</p>
         <ul>
@@ -80,31 +80,64 @@
       <section>
         <h2>Le CSS:</h2>
         <p>
-          Dans la fichier <code>index.css</code>, vous trouverez le style pour grands écrans qui:
+          Dans la fichier <code>index.css</code>, vous trouverez le style pour grands
+          écrans ( > 600px ) qui:
         </p>
         <ul>
-          <li>
-            Cache le bouton du menu
-          </li>
+          <li>Cache le bouton du menu</li>
           <li>Aligne les liens dans la Navbar</li>
         </ul>
 
-        <br>
-        
-        <p>Puis grâce au query <code>@media</code>, vous trouverez le style pour petit écran (<600px) qui:</p>
+        <br />
+
+        <p>
+          Puis dans le query <code>@media</code>, vous trouverez le style pour petit
+          écran ( < 600px ) qui:
+        </p>
         <ul>
           <li>Afficher le bouton du menu</li>
-          <li>Met le menu en position absolue afin de le cacher ou de l'afficher en changeant sa position.</li>
+          <li>
+            Met le menu en position absolue afin de le cacher ou de l'afficher en
+            changeant sa position.
+          </li>
         </ul>
       </section>
 
+      <section>
+        <h2>Le Javascript</h2>
+        <p>
+         Dans le fichier index.js, vous trouverez le script reponsable de l'interaction avec la page, afin d'afficher ou de cacher le menu:
+        </p>
+        <ul>
+          <li>
+            Sélectionne l'élément HTML représentant le bouton du menu avec son id
+            <code>menu-button</code>.
+          </li>
+          <li>Ajoute un observateur d'événements clique, qui exécute une fonction.</li>
+        </ul>
+        <br />
+        <p>Dans la fonction qui s'éxecute lors du clique:</p>
+        <ul>
+          <li>
+            Sélectionne l'élément HTML représentant notre menu avec sa classe
+            <code>.menu</code>.
+          </li>
+          <li>
+            Teste si son id est égal à <code>menu-closed</code>, affecter la
+            valeur <code>menu-opened</code>
+          </li>
+          <li>
+            Sinon nous affecter la valeur <code>menu-closed</code>
+          </li>
+        </ul>
+      </section>
       <!--Notre script pour l'interaction avec le bouton du menu-->
       <script src="index.js"></script>
     </main>
 
     <footer>
       <a href="https://djemai-samy.com/posts/javascript-menu-slide.article"
-        >Tutoriel complet sur mon dite -></a
+        >Tutoriel par Djemai Samy -></a
       >
     </footer>
   </body>
