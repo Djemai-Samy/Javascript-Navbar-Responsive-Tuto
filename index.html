@@ -17,36 +17,34 @@
   <body>
     <!--La Navbar-->
     <nav>
-        <i id="menu-button" class="bi bi-list"></i>
-        <span class="brand">BRAND</span>
-        <ul id="menu-closed" class="menu">
-            <li>
-                <a class="link" href="index.html">Acceuil</a>
-            </li>
-            <li>
-                <a class="link" href="index.html">Contact</a>
-            </li>
-            <li>
-                <a class="link" href="index.html">A propos</a>
-            </li>
-        </ul>
-      </nav>
+      <i id="menu-button" class="bi bi-list"></i>
+      <span class="brand">BRAND</span>
+      <ul id="menu-closed" class="menu">
+        <li>
+          <a class="link" href="index.html">Acceuil</a>
+        </li>
+        <li>
+          <a class="link" href="index.html">Contact</a>
+        </li>
+        <li>
+          <a class="link" href="index.html">A propos</a>
+        </li>
+      </ul>
+    </nav>
 
     <header>
       <h1>Tutoriel: Créer une Navbar Responsive en Javascript</h1>
       <p>Tutoriel pour créer un Navbar responsive avec HTML, CSS et Javascript.</p>
       <p>
-        La Navbar s'adapte à la taille de l'écran, et affiche un bouton pour dérouler
-        le menu pour petit écran.
+        La Navbar s'adapte à la taille de l'écran, et affiche un bouton pour dérouler le
+        menu pour petit écran.
       </p>
     </header>
 
     <main>
       <section>
         <h2>Structure du projet:</h2>
-        <p>
-          Dans cet l'exemple , il y'a 3 fichiers:
-        </p>
+        <p>Dans cet l'exemple , il y'a 3 fichiers:</p>
         <pre>
           📦Javascript-Navbar-Responsive-Tuto 
            ┣ 📜index.css 
@@ -67,22 +65,37 @@
               >Le lien du CDN des icones de Bootstrap</a
             >
           </li>
-          <li>
-            Le liens vers le fichier css <code>index.css</code>:
-          </li>
+          <li>Le liens vers le fichier css <code>index.css</code>:</li>
         </ul>
 
+        <br>
+
+        <p>Et dans la balise <code>body</code>, vous trouverez:</p>
+        <ul>
+          <li>La balise <code>nav</code> contenant une icone et une liste de liens.</li>
+          <li>Le lien vers le fichier script <code>index.js</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Le CSS:</h2>
         <p>
-            Et dans dans la balise <code>body</code>, vous trouverez:
-          </p>
-          <ul>
-            <li>
-                La balise <code>nav</code> contenant une icone et une liste de liens.
-            </li>
-            <li>
-                Le lien vers le fichier script <code>index.js</code>
-            </li>
-          </ul>
+          Dans la fichier <code>index.css</code>, vous trouverez le style pour grands écrans qui:
+        </p>
+        <ul>
+          <li>
+            Cache le bouton du menu
+          </li>
+          <li>Aligne les liens dans la Navbar</li>
+        </ul>
+
+        <br>
+        
+        <p>Puis grâce au query <code>@media</code>, vous trouverez le style pour petit écran (<600px) qui:</p>
+        <ul>
+          <li>Afficher le bouton du menu</li>
+          <li>Met le menu en position absolue afin de le cacher ou de l'afficher en changeant sa position.</li>
+        </ul>
       </section>
 
       <!--Notre script pour l'interaction avec le bouton du menu-->

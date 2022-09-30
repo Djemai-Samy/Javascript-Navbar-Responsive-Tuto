@@ -1,0 +1,101 @@
+/* STYLE GRAND ECRAN POUR TUTO */
+
+:root {
+  --main-color: rgb(4, 36, 84);
+}
+
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 0.5em;
+}
+
+nav {
+  list-style: none;
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-color);
+}
+
+.menu {
+  position: relative;
+  display: flex;
+}
+
+.link {
+  color: whitesmoke;
+  padding: 0 0.5em;
+}
+
+#menu-button {
+  display: none;
+}
+
+.brand {
+  color: whitesmoke;
+  padding: 0 10px;
+}
+
+/* STYLE HORS TUTO */
+h1, h2{
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+section{
+  font-size: .9em;
+  border-top: 1px solid var(--main-color);
+  padding: 0.5em;
+  margin: 1em auto;
+
+}
+
+li{
+  margin-left: 1.5em;
+}
+
+footer{
+  background-color: var(--main-color);
+  padding: 1.5em;
+  
+}
+
+footer > a{
+  color:whitesmoke;
+}
+
+/* STYLE PETIT ECRAN POUR TUTO */
+@media screen and (max-width: 600px) {
+  #menu-button {
+    display: inline;
+    color: whitesmoke;
+    font-size: 2em;
+    padding: 0 0.5em;
+    cursor: pointer;
+  }
+  .menu {
+    position: absolute;
+    top: 3.6em;
+    background-color: rgba(4, 36, 84, 0.952);
+    flex-direction: column;
+    padding: 2em;
+    min-width: 50%;
+    transition: all 0.5s ease-in-out;
+  }
+  #menu-closed{
+    left: -100%;
+  }
+  #menu-opened{
+    left: 0;
+  }
+}
