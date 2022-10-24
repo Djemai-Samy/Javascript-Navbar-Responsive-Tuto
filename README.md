@@ -181,10 +181,7 @@ Pour pouvoir modifier le style des éléments suivant la taille de l'écran, nou
 }
 ```
 
-<img
-    style="width: 100%; maxHeight: 60vh; objectFit: contain;"
-    src="https://djemai-samy.com/blog/2.programmation/1.web/3.javascript/1.javascript-menu-slide/JS-MenuSlide-3.gif"
-  />
+![La navbar s'adapte aux changements de taille de la fenetre](https://djemai-samy.com/blog/2.programmation/1.web/3.javascript/javascript-menu-slide/JS-MenuSlide-3.gif)
 
 ## 4/ Le Javascript
 
@@ -220,10 +217,7 @@ menuButtonElement.addEventListener("click", () => {
 });
 ```
 
-<img
-    style="width: 100%; maxHeight: 60vh; objectFit: contain;"
-    src="https://djemai-samy.com/blog/2.programmation/1.web/3.javascript/1.javascript-menu-slide/4_MenuSlideJS.gif"
-  />
+![Ouverture et fermeture du menu](https://djemai-samy.com/blog/2.programmation/1.web/3.javascript/javascript-menu-slide/4_MenuSlideJS.gif)
 
 ---
 
